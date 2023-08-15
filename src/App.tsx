@@ -10,7 +10,7 @@ import {
 	parseEther,
 	publicActions,
 } from "viem";
-import { goerli, mainnet, polygonMumbai } from "viem/chains";
+import { goerli, mainnet, polygon } from "viem/chains";
 import 'viem/window'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     const updateChain = async () => {
-      await walletClient.switchChain({id: polygonMumbai.id})
+      await walletClient.switchChain({id: polygon.id})
     }
 
     updateChain();
